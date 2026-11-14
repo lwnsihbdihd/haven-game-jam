@@ -1,5 +1,6 @@
 extends Node2D
 @onready var player: CharacterBody2D = $"Player"
+@onready var level_root: Node2D = $LevelRoot
 
 signal player_died
 
@@ -12,9 +13,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 func _connect_signals(body: Node) -> void:
-	var player = body.get_node_or_null("Player")
-	if player:
-		body.player_died.connect(_add_corpse)
+	var enemies = level_root.get_node_or_null("Enemies")
+	if enemies:
+		for enemy in enemies.get_children():
+			enemy.player_died.connect(_add_corpse)
 
 func _add_corpse() -> void:
 	pass
