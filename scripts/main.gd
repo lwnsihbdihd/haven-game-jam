@@ -2,6 +2,9 @@ extends Node2D
 @onready var player: CharacterBody2D = $"Player"
 @onready var level_root: Node2D = $LevelRoot
 
+var main_menu: Node = null
+var pause_menu: Node = null
+
 signal player_died
 
 # Called when the node enters the scene tree for the first time.
