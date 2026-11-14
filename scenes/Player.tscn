@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ddah0dm8qi5ak"]
+
+[ext_resource type="Script" uid="uid://cibgnog1qsufy" path="res://scripts/player.gd" id="1_p0vlq"]
+[ext_resource type="Texture2D" uid="uid://cyxek7mkcvpw8" path="res://assets/images/player/haven-player.png" id="2_v6fml"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ujbg4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v6fml")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
+size = Vector2(16, 16)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1162259996]
+script = ExtResource("1_p0vlq")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=666623968]
+sprite_frames = SubResource("SpriteFrames_ujbg4")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=237440734]
+shape = SubResource("RectangleShape2D_v6fml")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=601901737]
+zoom = Vector2(3, 3)
