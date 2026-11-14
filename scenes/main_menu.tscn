@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c64yfexktv616"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxlxw"]
+bg_color = Color(0.3916864, 0.64816725, 0.68918383, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_yme8y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rxlxw"]
+font = SubResource("SystemFont_yme8y")
+font_size = 128
+shadow_size = 2
+
+[node name="MainMenu" type="CanvasLayer" unique_id=334783128]
+
+[node name="Panel" type="Panel" parent="." unique_id=2047081767]
+offset_right = 1276.0
+offset_bottom = 705.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rxlxw")
+
+[node name="PlayButton" type="Button" parent="." unique_id=1208795819]
+offset_left = 19.0
+offset_top = 602.0
+offset_right = 474.0
+offset_bottom = 683.0
+theme_override_font_sizes/font_size = 48
+text = "Play"
+autowrap_trim_flags = 64
+
+[node name="QuitButton" type="Button" parent="." unique_id=2021866468]
+offset_left = 798.0
+offset_top = 602.0
+offset_right = 1253.0
+offset_bottom = 683.0
+theme_override_font_sizes/font_size = 48
+text = "Quit"
+autowrap_trim_flags = 64
+
+[node name="Title" type="Label" parent="." unique_id=2032765788]
+offset_right = 1272.0
+offset_bottom = 194.0
+text = "Name"
+label_settings = SubResource("LabelSettings_rxlxw")
+horizontal_alignment = 1
+vertical_alignment = 1
