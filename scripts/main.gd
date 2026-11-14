@@ -1,11 +1,11 @@
 extends Node2D
-@onready var player: CharacterBody2D = $"Player"
 @onready var level_root: Node2D = $LevelRoot
 
 var corpse: Node = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print("ready")
 	_connect_signals()
 
 
@@ -21,9 +21,15 @@ func _connect_signals() -> void:
 
 func _add_corpse(body) -> void:
 	if body.name == "Player":
-		player.die()
-		var corpse_path = "res://scenes/corpse.tscn"
-		corpse = load(corpse_path).instantiate()
-		corpse.x = body.x
-		corpse.y = body.y
+		body.die()
+		var Corpse = preload("res://scenes/corpse.tscn")
+		var corpse = Corpse.instantiate()
+		call_deferred("add_child", corpse)
+		corpse.position = body.position
+		_tp_player(540, 440, body)
+		body.revive()
+		
+		
 	
+func _tp_player(x: float, y: float, player: Node) -> void:
+	player.position = Vector2(x, y)

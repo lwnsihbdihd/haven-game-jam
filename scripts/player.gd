@@ -8,7 +8,6 @@ var corpse: Node = null
 var can_move: bool = true
 var is_alive: bool = true
 
-
 func _physics_process(delta: float) -> void:
 	if not is_alive:
 		return
@@ -34,3 +33,6 @@ func _physics_process(delta: float) -> void:
 
 func die() -> void:
 	is_alive = false
+	
+func revive() -> void:
+	is_alive = true
