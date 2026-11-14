@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://byt0ta6ig0awq"]
+
+[ext_resource type="Texture2D" uid="uid://vb40k5jwipg1" path="res://assets/images/LampOil1.png" id="1_jbojv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rxlxw"]
+
+[node name="Area2D" type="Area2D" unique_id=2000647956]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1992891928]
+position = Vector2(262, -13)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_jbojv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=48877471]
+shape = SubResource("CircleShape2D_rxlxw")
