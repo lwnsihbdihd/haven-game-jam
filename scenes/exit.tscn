@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ifbjtwpknm1q"]
+
+[ext_resource type="Texture2D" uid="uid://dp6hbk6kt521w" path="res://assets/tilesheets/LampOil1.png" id="1_l0aq0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujbg4"]
+
+[node name="Exit" type="Area2D" unique_id=46624582]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=353639565]
+texture = ExtResource("1_l0aq0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1699741922]
+shape = SubResource("CircleShape2D_ujbg4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

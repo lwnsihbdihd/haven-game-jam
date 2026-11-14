@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dfrkjvwxgq41d" path="res://scenes/killbert.tscn" id="3_rus8k"]
 [ext_resource type="Texture2D" uid="uid://wq3kba6a31pq" path="res://assets/tilesheets/SheetB.png" id="4_4nkto"]
 [ext_resource type="PackedScene" uid="uid://ddah0dm8qi5ak" path="res://scenes/Player.tscn" id="4_x42e6"]
+[ext_resource type="PackedScene" uid="uid://ifbjtwpknm1q" path="res://scenes/exit.tscn" id="5_6761a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcfvj"]
 texture = ExtResource("3_5xbjy")
@@ -186,3 +187,6 @@ tile_set = SubResource("TileSet_rxlxw")
 
 [node name="Player" parent="." unique_id=1162259996 instance=ExtResource("4_x42e6")]
 position = Vector2(20, -20)
+
+[node name="Exit" parent="." unique_id=46624582 instance=ExtResource("5_6761a")]
+position = Vector2(251, -23)

@@ -196,12 +196,10 @@ sources/0 = SubResource("TileSetAtlasSource_pa8r4")
 [node name="Enemies" type="Node2D" parent="." unique_id=1530885832]
 
 [node name="Killbert" parent="Enemies" unique_id=1018806575 instance=ExtResource("1_ra442")]
-visible = false
-position = Vector2(748, 408)
+position = Vector2(125.99999, 13.999999)
 
-[node name="Killbert2" parent="Enemies" unique_id=968741869 instance=ExtResource("1_ra442")]
-visible = false
-position = Vector2(283, 408)
+[node name="Killbert2" parent="Enemies" unique_id=31795189 instance=ExtResource("1_ra442")]
+position = Vector2(157.99998, 13.999999)
 
 [node name="Map" type="Node2D" parent="." unique_id=649831481]
 
@@ -210,11 +208,11 @@ tile_map_data = PackedByteArray("AAALAP//AAAHAAIAAAAGAP//AAADAAQAAAAFAP//AAABAAQ
 tile_set = SubResource("TileSet_yme8y")
 
 [node name="Hazard" type="TileMapLayer" parent="Map" unique_id=1658991166]
-tile_map_data = PackedByteArray("AAAIAAAAAAAGAAcAAAAJAAAAAAAFAAcAAAA=")
+tile_map_data = PackedByteArray("AAAIAAAAAAAGAAcAAAAJAAAAAAAFAAcAAAAKAAAAAAAGAAcAAAAHAAAAAAAFAAcAAAA=")
 tile_set = SubResource("TileSet_2b5le")
 
 [node name="Tile" type="TileMapLayer" parent="Map" unique_id=643864462]
-tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAACAAAAAAABAAEAAAADAAAAAAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAAHAAAAAAABAAEAAAAKAAAAAAABAAEAAAALAAAAAAABAAEAAAAMAAAAAAABAAEAAAANAAAAAAABAAEAAAAOAAAAAAABAAEAAAAPAAAAAAABAAEAAAAQAAAAAAABAAEAAAAIAAEAAAAHAAgAAAAHAAEAAAAHAAgAAAAJAAEAAAAHAAgAAAAKAAEAAAAHAAgAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAACAAAAAAABAAEAAAADAAAAAAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAALAAAAAAABAAEAAAAMAAAAAAABAAEAAAANAAAAAAABAAEAAAAOAAAAAAABAAEAAAAPAAAAAAABAAEAAAAQAAAAAAABAAEAAAAIAAEAAAAHAAgAAAAHAAEAAAAHAAgAAAAJAAEAAAAHAAgAAAAKAAEAAAAHAAgAAAA=")
 tile_set = SubResource("TileSet_rxlxw")
 
 [node name="Player" parent="." unique_id=1162259996 instance=ExtResource("4_fiq81")]

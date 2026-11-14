@@ -6,7 +6,7 @@ var level: int = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("ready")
+	current_level_root = get_node("LevelRoot")
 	_connect_signals()
 
 func _load_level(level_number: int) -> void:
@@ -29,24 +29,23 @@ func _connect_signals() -> void:
 	var enemies = level_root.get_node_or_null("Enemies")
 	if enemies:
 		for enemy in enemies.get_children():
-			print("enemy")
 			enemy.player_died.connect(_add_corpse)
 
 func _add_corpse(body) -> void:
 	if body.name == "Player":
-		body.die()
 		var Corpse = preload("res://scenes/corpse.tscn")
 		var corpse = Corpse.instantiate()
 		call_deferred("add_child", corpse)
 		corpse.position = body.position
 		_tp_player(20, -20, body)
+		body.die()
 		body.revive()
 
 func _next_level(body) -> void:
 	if body.name == "Player":
 		level += 1
 		body.can_move = false
-		_load_level(level)
+		call_deferred("_load_level", level)
 	
 	
 func _tp_player(x: float, y: float, player: Node) -> void:
