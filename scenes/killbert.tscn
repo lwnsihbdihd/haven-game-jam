@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dfrkjvwxgq41d"]
+
+[node name="Killbert" type="Area2D" unique_id=1018806575]
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1616324077]
+
+[node name="CollisionBox" type="CollisionShape2D" parent="." unique_id=339127487]
