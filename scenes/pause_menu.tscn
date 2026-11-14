@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://d7v5epl0rvhu"]
+
+[ext_resource type="FontFile" uid="uid://bfxdxqs5kjdej" path="res://assets/fonts/PixelGame-R9AZe.otf" id="1_n87rw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxlxw"]
+bg_color = Color(0.3916864, 0.64816725, 0.68918383, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_rxlxw"]
+font = ExtResource("1_n87rw")
+font_size = 128
+shadow_size = 2
+
+[node name="Panel" type="Panel" unique_id=1167266234]
+offset_left = 80.0
+offset_top = 116.0
+offset_right = 1165.0
+offset_bottom = 460.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rxlxw")
+
+[node name="ResumeButton" type="Button" parent="." unique_id=1120887262]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 245.0
+offset_right = 474.0
+offset_bottom = 326.0
+theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_font_sizes/font_size = 48
+text = "Resume
+"
+autowrap_trim_flags = 64
+
+[node name="MainMenuButton" type="Button" parent="." unique_id=1242826032]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 243.0
+offset_right = 1057.0
+offset_bottom = 324.0
+theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_font_sizes/font_size = 48
+text = "Main Menu"
+autowrap_trim_flags = 64
+
+[node name="Title" type="Label" parent="." unique_id=878176612]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 3.0
+offset_right = 1083.0
+offset_bottom = 197.0
+text = "Pause"
+label_settings = SubResource("LabelSettings_rxlxw")
+horizontal_alignment = 1
+vertical_alignment = 1

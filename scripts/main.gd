@@ -2,24 +2,28 @@ extends Node2D
 @onready var player: CharacterBody2D = $"Player"
 @onready var level_root: Node2D = $LevelRoot
 
-var main_menu: Node = null
-var pause_menu: Node = null
-
-signal player_died
+var corpse: Node = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	_connect_signals()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
-func _connect_signals(body: Node) -> void:
+func _connect_signals() -> void:
 	var enemies = level_root.get_node_or_null("Enemies")
 	if enemies:
 		for enemy in enemies.get_children():
+			print("enemy")
 			enemy.player_died.connect(_add_corpse)
 
-func _add_corpse() -> void:
-	pass
+func _add_corpse(body) -> void:
+	if body.name == "Player":
+		player.die()
+		var corpse_path = "res://scenes/corpse.tscn"
+		corpse = load(corpse_path).instantiate()
+		corpse.x = body.x
+		corpse.y = body.y
+	
