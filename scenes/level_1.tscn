@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxlxw"]
 size = Vector2(1331, 128)
 
-[node name="Level1" type="Node2D" unique_id=1267135740]
+[node name="LevelRoot" type="Node2D" unique_id=1267135740]
 
 [node name="tempGround" type="StaticBody2D" parent="." unique_id=1180876302]
 position = Vector2(247, 546)
@@ -28,7 +28,7 @@ position = Vector2(539, 438)
 [node name="Enemies" type="Node2D" parent="." unique_id=1530885832]
 
 [node name="Killbert" parent="Enemies" unique_id=1018806575 instance=ExtResource("3_rus8k")]
-position = Vector2(748, 408)
+position = Vector2(344, 403)
 
-[node name="Killbert2" parent="Enemies" unique_id=968741869 instance=ExtResource("3_rus8k")]
-position = Vector2(283, 408)
+[node name="Killbert2" parent="Enemies" unique_id=1648848865 instance=ExtResource("3_rus8k")]
+position = Vector2(776, 394)
