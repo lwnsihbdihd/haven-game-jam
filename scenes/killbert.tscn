@@ -1,15 +1,18 @@
 [gd_scene format=3 uid="uid://dfrkjvwxgq41d"]
 
 [ext_resource type="Script" uid="uid://ced5sccdhyd2m" path="res://scripts/killbert.gd" id="1_cm7o4"]
-[ext_resource type="Texture2D" uid="uid://cts4uf54q8g4j" path="res://icon.svg" id="1_ovd7k"]
+[ext_resource type="Texture2D" uid="uid://btnm50ewsdnd7" path="res://icon.svg" id="1_ovd7k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxlxw"]
 size = Vector2(132, 128)
 
 [node name="Killbert" type="Area2D" unique_id=1018806575]
+scale = Vector2(0.2, 0.2)
+collision_layer = 2
 script = ExtResource("1_cm7o4")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1616324077]
+use_parent_material = true
 texture = ExtResource("1_ovd7k")
 flip_v = true
 

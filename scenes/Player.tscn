@@ -14,19 +14,32 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujbg4"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
+size = Vector2(14, 14)
+
 [node name="Player" type="CharacterBody2D" unique_id=1162259996]
+collision_mask = 15
 script = ExtResource("1_p0vlq")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=666623968]
 sprite_frames = SubResource("SpriteFrames_ujbg4")
 animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=237440734]
-shape = SubResource("RectangleShape2D_v6fml")
+[node name="CollisionBox" type="CollisionShape2D" parent="." unique_id=372639255]
+shape = SubResource("RectangleShape2D_ujbg4")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=601901737]
 zoom = Vector2(3, 3)
+limit_left = 0
+limit_bottom = 16
 position_smoothing_enabled = true
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=975114353]
+
+[node name="Hitbox" type="CollisionShape2D" parent="Hitbox" unique_id=237440734]
+shape = SubResource("RectangleShape2D_v6fml")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
