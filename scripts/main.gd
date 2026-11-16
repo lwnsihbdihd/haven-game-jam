@@ -103,6 +103,12 @@ func _set_up_level(level_root: Node) -> void:
 		for enemy in enemies.get_children():
 			print("enemy found")
 			enemy.player_died.connect(_add_corpse)
+	
+	var hazards = level_root.get_node_or_null("Hazards")
+	if hazards:
+		for hazard in hazards.get_children():
+			print("hazard found")
+			hazard.player_died.connect(_add_corpse)
 
 func _set_up_hud(level_root: Node) -> void:
 	var reset_level = level_root.get_node_or_null("HUD/ResetLevel")

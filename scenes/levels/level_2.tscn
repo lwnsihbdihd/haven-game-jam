@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://4lta3g1gimk5"]
 
-[ext_resource type="PackedScene" uid="uid://dfrkjvwxgq41d" path="res://scenes/killbert.tscn" id="1_ra442"]
 [ext_resource type="Texture2D" uid="uid://xmmh7yqovqnj" path="res://assets/tilesheets/SheetA.png" id="2_fiq81"]
 [ext_resource type="Texture2D" uid="uid://wq3kba6a31pq" path="res://assets/tilesheets/SheetB.png" id="3_l37oo"]
 [ext_resource type="PackedScene" uid="uid://ddah0dm8qi5ak" path="res://scenes/Player.tscn" id="4_fiq81"]
+[ext_resource type="PackedScene" uid="uid://c8wfyqillwgd3" path="res://scenes/hazard.tscn" id="5_l37oo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcfvj"]
 texture = ExtResource("2_fiq81")
@@ -195,12 +195,6 @@ sources/0 = SubResource("TileSetAtlasSource_pa8r4")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1530885832]
 
-[node name="Killbert" parent="Enemies" unique_id=1018806575 instance=ExtResource("1_ra442")]
-position = Vector2(128, 15.999989)
-
-[node name="Killbert2" parent="Enemies" unique_id=1461404709 instance=ExtResource("1_ra442")]
-position = Vector2(157.99998, 14.999996)
-
 [node name="Map" type="Node2D" parent="." unique_id=649831481]
 
 [node name="Deco" type="TileMapLayer" parent="Map" unique_id=523150411]
@@ -217,3 +211,17 @@ tile_set = SubResource("TileSet_rxlxw")
 
 [node name="Player" parent="." unique_id=1162259996 instance=ExtResource("4_fiq81")]
 position = Vector2(20, -20)
+
+[node name="Hazards" type="Node2D" parent="." unique_id=463982649]
+
+[node name="Hazard" parent="Hazards" unique_id=69432172 instance=ExtResource("5_l37oo")]
+position = Vector2(120, 8)
+
+[node name="Hazard2" parent="Hazards" unique_id=1156537313 instance=ExtResource("5_l37oo")]
+position = Vector2(136, 8)
+
+[node name="Hazard3" parent="Hazards" unique_id=1373724 instance=ExtResource("5_l37oo")]
+position = Vector2(152, 8)
+
+[node name="Hazard4" parent="Hazards" unique_id=1997584911 instance=ExtResource("5_l37oo")]
+position = Vector2(168, 8)
