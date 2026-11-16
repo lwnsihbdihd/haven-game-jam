@@ -1,56 +1,69 @@
-[gd_scene format=3 uid="uid://d7v5epl0rvhu"]
+[gd_scene format=3 uid="uid://y1oump0lcop3"]
 
 [ext_resource type="FontFile" uid="uid://bfxdxqs5kjdej" path="res://assets/fonts/PixelGame-R9AZe.otf" id="1_n87rw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxlxw"]
 bg_color = Color(0.3916864, 0.64816725, 0.68918383, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="LabelSettings" id="LabelSettings_rxlxw"]
+[sub_resource type="LabelSettings" id="LabelSettings_n87rw"]
 font = ExtResource("1_n87rw")
 font_size = 128
 shadow_size = 2
 
-[node name="Panel" type="Panel" unique_id=1167266234]
-offset_left = 80.0
-offset_top = 116.0
-offset_right = 1165.0
-offset_bottom = 460.0
+[node name="PauseMenu" type="CanvasLayer" unique_id=1319033928]
+
+[node name="PausePanel" type="Panel" parent="." unique_id=1907194974]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.5
+offset_top = -172.0
+offset_right = 542.5
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rxlxw")
 
-[node name="ResumeButton" type="Button" parent="." unique_id=1120887262]
+[node name="ResumeButton" type="Button" parent="PausePanel" unique_id=993775795]
 layout_mode = 0
 offset_left = 19.0
 offset_top = 245.0
 offset_right = 474.0
 offset_bottom = 326.0
 theme_override_fonts/font = ExtResource("1_n87rw")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 71
 text = "Resume
 "
 autowrap_trim_flags = 64
 
-[node name="MainMenuButton" type="Button" parent="." unique_id=1242826032]
+[node name="MainMenuButton" type="Button" parent="PausePanel" unique_id=1653399171]
 layout_mode = 0
 offset_left = 602.0
 offset_top = 243.0
 offset_right = 1057.0
 offset_bottom = 324.0
 theme_override_fonts/font = ExtResource("1_n87rw")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 71
 text = "Main Menu"
 autowrap_trim_flags = 64
 
-[node name="Title" type="Label" parent="." unique_id=878176612]
+[node name="Title" type="Label" parent="PausePanel" unique_id=1707668397]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 3.0
 offset_right = 1083.0
 offset_bottom = 197.0
 text = "Pause"
-label_settings = SubResource("LabelSettings_rxlxw")
+label_settings = SubResource("LabelSettings_n87rw")
 horizontal_alignment = 1
 vertical_alignment = 1

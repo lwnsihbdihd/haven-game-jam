@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dqj8pcrj028ef"]
+
+[ext_resource type="FontFile" uid="uid://bfxdxqs5kjdej" path="res://assets/fonts/PixelGame-R9AZe.otf" id="1_ahhtf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ujbg4"]
+font = ExtResource("1_ahhtf")
+font_size = 20
+
+[node name="HUD" type="CanvasLayer" unique_id=1109411756]
+
+[node name="ResetLevel" type="Button" parent="." unique_id=1503526754]
+anchors_preset = -1
+anchor_left = 0.92265624
+anchor_right = 1.0
+anchor_bottom = 0.023611112
+offset_left = -126.0
+offset_top = 23.0
+offset_right = -27.0
+offset_bottom = 65.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_ahhtf")
+theme_override_font_sizes/font_size = 42
+text = "Reset Level"
+metadata/_edit_use_anchors_ = true
+
+[node name="ControlsPanel" type="Panel" parent="." unique_id=287511792]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -225.0
+offset_top = 99.0
+offset_right = -27.0
+offset_bottom = 159.0
+grow_horizontal = 0
+
+[node name="Controls" type="Label" parent="ControlsPanel" unique_id=948329322]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "WASD/Arrows       Move
+Esc                              Pause"
+label_settings = SubResource("LabelSettings_ujbg4")

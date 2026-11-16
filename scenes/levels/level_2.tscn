@@ -196,10 +196,10 @@ sources/0 = SubResource("TileSetAtlasSource_pa8r4")
 [node name="Enemies" type="Node2D" parent="." unique_id=1530885832]
 
 [node name="Killbert" parent="Enemies" unique_id=1018806575 instance=ExtResource("1_ra442")]
-position = Vector2(125.99999, 13.999999)
+position = Vector2(128, 15.999989)
 
-[node name="Killbert2" parent="Enemies" unique_id=31795189 instance=ExtResource("1_ra442")]
-position = Vector2(157.99998, 13.999999)
+[node name="Killbert2" parent="Enemies" unique_id=1461404709 instance=ExtResource("1_ra442")]
+position = Vector2(157.99998, 14.999996)
 
 [node name="Map" type="Node2D" parent="." unique_id=649831481]
 

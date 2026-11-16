@@ -5,6 +5,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ujbg4"]
 
 [node name="Exit" type="Area2D" unique_id=46624582]
+collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=353639565]
 texture = ExtResource("1_l0aq0")
