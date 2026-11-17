@@ -97,7 +97,7 @@ func _set_up_level(level_root: Node) -> void:
 	var player = level_root.get_node_or_null("Player")
 	if player:
 		player.player_died.connect(_add_corpse)
-		
+	
 
 func _set_up_hud(level_root: Node) -> void:
 	var reset_level = level_root.get_node_or_null("HUD/ResetLevel")
