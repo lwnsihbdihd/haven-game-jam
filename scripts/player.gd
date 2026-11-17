@@ -42,12 +42,15 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func die() -> void:
+	if not is_alive:
+		return
+	
 	is_alive = false
-	queue_free()
+	player_died.emit(self)
 	
 func revive() -> void:
 	is_alive = true
 
-func _on_hitbox_area_entered(area: Area2D) -> void:
+func _on_hitbox_area_entered(area: Area2D) -> void:	
 	if area.collision_layer == 2 and area.collision_mask == 1:
-		player_died.emit()
+		die()

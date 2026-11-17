@@ -98,11 +98,6 @@ func _set_up_level(level_root: Node) -> void:
 	if player:
 		player.player_died.connect(_add_corpse)
 		
-	var enemies = level_root.get_node_or_null("Enemies")
-	if enemies:
-		for enemy in enemies.get_children():
-			print("enemy found")
-			enemy.player_died.connect(_add_corpse)
 
 func _set_up_hud(level_root: Node) -> void:
 	var reset_level = level_root.get_node_or_null("HUD/ResetLevel")
@@ -120,6 +115,7 @@ func _add_corpse(body) -> void:
 		$Corpses.call_deferred("add_child", corpse)
 		corpse.position = body.position
 		_tp_player(52, -8, body)
+		body.revive.call_deferred()
 		#body.die()
 		#call_deferred("_load_level", 1)
 
