@@ -114,6 +114,7 @@ texture = ExtResource("2_fmg3e")
 4:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:1/0 = 0
 8:1/0 = 0
 8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -204,11 +205,11 @@ tile_map_data = PackedByteArray("AAALAP//AAAHAAIAAAAGAP//AAADAAQAAAAFAP//AAABAAQ
 tile_set = SubResource("TileSet_yme8y")
 
 [node name="Hazard" type="TileMapLayer" parent="Map" unique_id=1658991166]
-tile_map_data = PackedByteArray("AAAIAAAAAAAGAAcAAAAHAAAAAAAFAAcAAAAJAAAAAAAFAAcAAAAKAAAAAAAGAAcAAAA=")
+tile_map_data = PackedByteArray("AAAIAAAAAAAGAAcAAAAHAAAAAAAFAAcAAAAOAAAAAAAGAAcAAAAQAAAAAAAGAAcAAAAPAAAAAAAFAAgAAAARAAAAAAAFAAcAAAA=")
 tile_set = SubResource("TileSet_2b5le")
 
 [node name="Tile" type="TileMapLayer" parent="Map" unique_id=643864462]
-tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAACAAAAAAABAAEAAAADAAAAAAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAALAAAAAAABAAEAAAAMAAAAAAABAAEAAAANAAAAAAABAAEAAAAOAAAAAAABAAEAAAAPAAAAAAABAAEAAAAQAAAAAAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAACAAAAAAABAAEAAAADAAAAAAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAALAAAAAAABAAEAAAAMAAAAAAABAAEAAAANAAAAAAABAAEAAAAJAAAAAAABAAEAAAAKAAAAAAABAAEAAAASAAAAAAABAAEAAAATAAAAAAAGAAMAAAATAP//AAAGAAEAAAAUAP//AAABAAEAAAAVAP//AAABAAEAAAAWAP//AAABAAEAAAAXAP//AAAGAAMAAAAXAP7/AAAGAAEAAAAYAP7/AAABAAEAAAAZAP7/AAABAAEAAAAaAP7/AAABAAEAAAAUAAAAAAAHAAgAAAAVAAAAAAAHAAgAAAAWAAAAAAAHAAgAAAAXAAAAAAAHAAgAAAAYAAAAAAAHAAgAAAAYAP//AAAHAAgAAAAZAP//AAAHAAgAAAAZAAAAAAAHAAgAAAAaAP//AAAHAAgAAAAaAAAAAAAHAAgAAAA=")
 tile_set = SubResource("TileSet_rxlxw")
 
 [node name="Player" parent="." unique_id=1162259996 instance=ExtResource("3_ftfob")]
@@ -222,13 +223,19 @@ position = Vector2(120, 8)
 [node name="Hazard2" parent="Hazards" unique_id=1156537313 instance=ExtResource("4_fkk1g")]
 position = Vector2(136, 8)
 
-[node name="Hazard3" parent="Hazards" unique_id=1761939170 instance=ExtResource("4_fkk1g")]
-position = Vector2(152, 8)
+[node name="Hazard3" parent="Hazards" unique_id=690807019 instance=ExtResource("4_fkk1g")]
+position = Vector2(232, 8)
 
-[node name="Hazard4" parent="Hazards" unique_id=918525203 instance=ExtResource("4_fkk1g")]
-position = Vector2(168, 8)
+[node name="Hazard4" parent="Hazards" unique_id=997374777 instance=ExtResource("4_fkk1g")]
+position = Vector2(248, 8)
+
+[node name="Hazard5" parent="Hazards" unique_id=1786121030 instance=ExtResource("4_fkk1g")]
+position = Vector2(264, 8)
+
+[node name="Hazard6" parent="Hazards" unique_id=82385775 instance=ExtResource("4_fkk1g")]
+position = Vector2(280, 8)
 
 [node name="Exit" parent="." unique_id=46624582 instance=ExtResource("5_ftfob")]
-position = Vector2(263, -20)
+position = Vector2(417, -52)
 
 [node name="HUD" parent="." unique_id=1109411756 instance=ExtResource("6_fkk1g")]

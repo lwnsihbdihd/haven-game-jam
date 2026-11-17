@@ -39,10 +39,13 @@ texture = ExtResource("1_rej77")
 10:7/0 = 0
 11:7/0 = 0
 11:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, 4, 8, 4, 8, 8, -4, 8)
+11:7/0/physics_layer_0/polygon_0/one_way = true
 12:7/0 = 0
 12:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 8, 4, 8, 8, -8, 8)
+12:7/0/physics_layer_0/polygon_0/one_way = true
 13:7/0 = 0
 13:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 0, 4, 0, 8, -8, 8)
+13:7/0/physics_layer_0/polygon_0/one_way = true
 1:8/0 = 0
 2:8/0 = 0
 3:8/0 = 0
@@ -51,10 +54,13 @@ texture = ExtResource("1_rej77")
 6:8/0 = 0
 9:8/0 = 0
 9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 4, 8, 4, 8, 8, 0, 8)
+9:8/0/physics_layer_0/polygon_0/one_way = true
 10:8/0 = 0
 10:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 8, 4, 8, 8, -8, 8)
+10:8/0/physics_layer_0/polygon_0/one_way = true
 11:8/0 = 0
 11:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 4, 4, 4, 8, -8, 8)
+11:8/0/physics_layer_0/polygon_0/one_way = true
 1:9/0 = 0
 2:9/0 = 0
 3:9/0 = 0
@@ -119,7 +125,9 @@ texture = ExtResource("2_5vn0v")
 3:1/0 = 0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, 2, -2, 6, -8, 8, -8, -8, 4, -8)
 5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, 2, 2, 6, 8, 8, 8, -8, -4, -8)
 6:1/0 = 0
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -6, 8, -8, 8, 8, -8, 8)
 7:1/0 = 0
@@ -134,7 +142,9 @@ texture = ExtResource("2_5vn0v")
 2:2/0 = 0
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, -2, -2, -6, -8, -8, -8, 8, 4, 8)
 5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -2, 2, -6, 8, -8, 8, 8, -4, 8)
 6:2/0 = 0
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, 2, 2, 6, 8, 8, 8, -8, -8, -8)
 7:2/0 = 0
@@ -215,7 +225,7 @@ sources/0 = SubResource("TileSetAtlasSource_pa8r4")
 [node name="Map" type="Node2D" parent="." unique_id=649831481]
 
 [node name="Deco" type="TileMapLayer" parent="Map" unique_id=523150411]
-tile_map_data = PackedByteArray("AAALAP//AAALAAoAAAAGAP//AAALAAoAAAAKAPv/AAALAAgAAAAGAPv/AAALAAcAAAAKAP3/AAALAAoAAAAKAP7/AAALAAoAAAAKAP//AAALAAoAAAAGAPz/AAALAAoAAAAGAP3/AAALAAoAAAAGAP7/AAALAAkAAAAHAPv/AAAMAAcAAAAIAPv/AAAMAAcAAAAJAPv/AAAKAAgAAAAJAPz/AAAKAAkAAAAKAPz/AAALAAcAAAALAPz/AAALAAgAAAALAP3/AAALAAoAAAALAP7/AAALAAoAAAAPAP7/AAAHAAIAAAA=")
+tile_map_data = PackedByteArray("AAALAP//AAALAAoAAAAGAP//AAALAAoAAAAKAPv/AAALAAgAAAAGAPv/AAALAAcAAAAKAP3/AAALAAoAAAAKAP7/AAALAAoAAAAKAP//AAALAAoAAAAGAPz/AAALAAoAAAAGAP3/AAALAAoAAAAGAP7/AAALAAkAAAAHAPv/AAAMAAcAAAAIAPv/AAAMAAcAAAAJAPv/AAAKAAgAAAAJAPz/AAAKAAkAAAAKAPz/AAALAAcAAAALAPz/AAALAAgAAAALAP3/AAALAAoAAAALAP7/AAALAAoAAAAPAP7/AAAHAAIAAAAGAPr/AAALAAoAAAABAPn/AAALAAkAAAABAPf/AAALAAcAAAACAPf/AAAMAAcAAAADAPf/AAAMAAcAAAAEAPf/AAAMAAcAAAAFAPf/AAAMAAcAAAAGAPf/AAALAAgAAAAKAPT/AAALAAgAAAAGAPT/AAALAAcAAAAGAPX/AAALAAoAAAAGAPb/AAALAAoAAAAKAPX/AAALAAoAAAAKAPb/AAALAAoAAAAKAPf/AAALAAoAAAAKAPj/AAALAAoAAAAKAPn/AAALAAoAAAAKAPr/AAALAAoAAAAGAPj/AAALAAoAAAAGAPn/AAALAAoAAAABAPj/AAALAAoAAAAHAPT/AAAMAAcAAAAIAPT/AAAMAAcAAAAJAPT/AAAMAAcAAAAFAPj/AAAKAAkAAAA=")
 tile_set = SubResource("TileSet_yme8y")
 
 [node name="Hazard" type="TileMapLayer" parent="Map" unique_id=1658991166]
@@ -223,7 +233,7 @@ tile_map_data = PackedByteArray("AAAIAAAAAAAGAAcAAAAHAAAAAAAFAAcAAAA=")
 tile_set = SubResource("TileSet_2b5le")
 
 [node name="Tile" type="TileMapLayer" parent="Map" unique_id=643864462]
-tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAACAAAAAAABAAEAAAADAAAAAAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAALAAAAAAABAAEAAAAMAAAAAAABAAEAAAANAAAAAAAGAAMAAAAOAAAAAAAHAAgAAAAPAAAAAAAHAAgAAAAQAAAAAAAHAAgAAAAJAAAAAAACAAEAAAAKAAAAAAACAAEAAAANAP//AAAGAAEAAAAOAP//AAABAAEAAAAPAP//AAABAAEAAAAQAP//AAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAACAAAAAAABAAEAAAADAAAAAAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAALAAAAAAABAAEAAAAMAAAAAAABAAEAAAANAAAAAAAGAAMAAAAOAAAAAAAHAAgAAAAPAAAAAAAHAAgAAAAQAAAAAAAHAAgAAAAJAAAAAAACAAEAAAAKAAAAAAACAAEAAAANAP//AAAGAAEAAAAOAP//AAABAAEAAAAPAP//AAABAAEAAAAQAP//AAABAAEAAAACAPr/AAABAAEAAAADAPr/AAAEAAEAAAABAPr/AAAFAAEAAAA=")
 tile_set = SubResource("TileSet_rxlxw")
 
 [node name="Player" parent="." unique_id=1162259996 instance=ExtResource("3_ts8eg")]
@@ -238,6 +248,6 @@ position = Vector2(120, 8)
 position = Vector2(136, 8)
 
 [node name="Exit" parent="." unique_id=46624582 instance=ExtResource("5_glw47")]
-position = Vector2(118, -86)
+position = Vector2(126, -194)
 
 [node name="HUD" parent="." unique_id=1109411756 instance=ExtResource("6_4wsov")]
