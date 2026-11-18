@@ -87,7 +87,13 @@ func _load_level(level_number: int, destroy_corpses: bool) -> void:
 	var player = current_level_root.get_node_or_null("Player")
 	var camera = player.get_node("Camera")
 	if level_number == 1:
-		camera.limit_right = 464
+		camera.limit_right = 496
+	elif level_number == 2:
+		camera.limit_right = 480
+	elif level_number == 3:
+		camera.limit_right = 560
+	elif level_number == 4:
+		camera.limit_right = 400
 
 func _set_up_level(level_root: Node) -> void:
 	var exit = level_root.get_node_or_null("Exit")
