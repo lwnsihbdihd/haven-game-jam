@@ -217,10 +217,10 @@ position = Vector2(64, -8)
 [node name="Hazards" type="Node2D" parent="." unique_id=463982649]
 
 [node name="Hazard" parent="Hazards" unique_id=69432172 instance=ExtResource("5_l37oo")]
-position = Vector2(280, 8)
+position = Vector2(280, 9)
 
 [node name="Hazard2" parent="Hazards" unique_id=1156537313 instance=ExtResource("5_l37oo")]
-position = Vector2(264, 8)
+position = Vector2(264, 9)
 
 [node name="HUD" parent="." unique_id=1109411756 instance=ExtResource("5_qpwj6")]
 
