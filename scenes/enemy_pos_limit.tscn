@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bakcumvr040nd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7j5s3"]
+size = Vector2(10, 34)
+
+[node name="EnemyPosLimit" type="Area2D" unique_id=1661877129]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1896937483]
+shape = SubResource("RectangleShape2D_7j5s3")
