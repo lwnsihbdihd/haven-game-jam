@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://5dorof1xkybg"]
 
+[ext_resource type="Script" uid="uid://w0o0gvgbn8uo" path="res://scripts/level_select.gd" id="1_2epne"]
 [ext_resource type="FontFile" uid="uid://bfxdxqs5kjdej" path="res://assets/fonts/PixelGame-R9AZe.otf" id="1_3shnc"]
 [ext_resource type="PackedScene" uid="uid://drda6nt4xu0tt" path="res://scenes/level_button.tscn" id="2_p0wlc"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2epne")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1431549219]
 layout_mode = 0
