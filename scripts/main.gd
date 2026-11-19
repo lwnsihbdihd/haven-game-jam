@@ -33,6 +33,7 @@ func _setup_main_menu(menu: Node) -> void:
 
 func _press_play() -> void:
 	main_menu.visible = false
+	level_menu.visible = false
 	_load_level(level, true)
 
 func _go_to_main_menu() -> void:
