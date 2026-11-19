@@ -1,11 +1,13 @@
 [gd_scene format=4 uid="uid://0slecuomgwn5"]
 
 [ext_resource type="Texture2D" uid="uid://xmmh7yqovqnj" path="res://assets/tilesheets/SheetA.png" id="1_rej77"]
+[ext_resource type="PackedScene" uid="uid://dfrkjvwxgq41d" path="res://scenes/killbert.tscn" id="1_ts8eg"]
 [ext_resource type="Texture2D" uid="uid://wq3kba6a31pq" path="res://assets/tilesheets/SheetB.png" id="2_5vn0v"]
 [ext_resource type="PackedScene" uid="uid://ddah0dm8qi5ak" path="res://scenes/Player.tscn" id="3_ts8eg"]
 [ext_resource type="PackedScene" uid="uid://c8wfyqillwgd3" path="res://scenes/hazard.tscn" id="4_um320"]
 [ext_resource type="PackedScene" uid="uid://ifbjtwpknm1q" path="res://scenes/exit.tscn" id="5_glw47"]
 [ext_resource type="PackedScene" uid="uid://dqj8pcrj028ef" path="res://scenes/hud.tscn" id="6_4wsov"]
+[ext_resource type="PackedScene" uid="uid://bakcumvr040nd" path="res://scenes/enemy_pos_limit.tscn" id="8_um320"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcfvj"]
 texture = ExtResource("1_rej77")
@@ -251,6 +253,9 @@ sources/0 = SubResource("TileSetAtlasSource_pa8r4")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1530885832]
 
+[node name="Killbert" parent="Enemies" unique_id=1018806575 instance=ExtResource("1_ts8eg")]
+position = Vector2(197.99998, -151)
+
 [node name="Map" type="Node2D" parent="." unique_id=649831481]
 
 [node name="Deco" type="TileMapLayer" parent="Map" unique_id=523150411]
@@ -280,3 +285,9 @@ position = Vector2(200, 8)
 position = Vector2(126, -194)
 
 [node name="HUD" parent="." unique_id=1109411756 instance=ExtResource("6_4wsov")]
+
+[node name="EnemyPosLimit" parent="." unique_id=1661877129 instance=ExtResource("8_um320")]
+position = Vector2(261, -153)
+
+[node name="EnemyPosLimit2" parent="." unique_id=1220719339 instance=ExtResource("8_um320")]
+position = Vector2(149, -152)
