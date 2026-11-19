@@ -14,9 +14,18 @@ grow_vertical = 2
 script = ExtResource("1_2epne")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1431549219]
-layout_mode = 0
-offset_right = 1279.0
-offset_bottom = 725.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -639.5
+offset_top = -362.5
+offset_right = 639.5
+offset_bottom = 362.5
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.15746477, 0.73945576, 0.6950908, 1)
 
 [node name="LevelMenu" type="ColorRect" parent="." unique_id=1673504283]

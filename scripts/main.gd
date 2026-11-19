@@ -27,9 +27,9 @@ func _setup_main_menu(menu: Node) -> void:
 	var play = menu.get_node_or_null("PlayButton")
 	if play:
 		play.pressed.connect(_press_play)
-	var quit = menu.get_node_or_null("QuitButton")
-	if quit:
-		quit.pressed.connect(_quit_game)
+	var level_select = menu.get_node_or_null("LevelsButton")
+	if level_select:
+		level_select.pressed.connect(_open_level_menu)
 
 func _press_play() -> void:
 	main_menu.visible = false
@@ -38,13 +38,15 @@ func _press_play() -> void:
 func _go_to_main_menu() -> void:
 	get_tree().paused = false
 	pause_menu.visible = false
+	level_menu.visible = false
 	main_menu.visible = true
 	
 	if current_level_root:
 		current_level_root.queue_free()
 		
-func _quit_game() -> void:
-	get_tree().quit()
+func _open_level_menu() -> void:
+	main_menu.visible = false
+	level_menu.visible = true
 
 	# PAUSE MENU
 
