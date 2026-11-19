@@ -14,7 +14,7 @@ shadow_size = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=2047081767]
 offset_right = 1276.0
-offset_bottom = 705.0
+offset_bottom = 727.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rxlxw")
 
 [node name="PlayButton" type="Button" parent="." unique_id=1208795819]
@@ -27,14 +27,14 @@ theme_override_font_sizes/font_size = 71
 text = "Play"
 autowrap_trim_flags = 64
 
-[node name="QuitButton" type="Button" parent="." unique_id=2021866468]
+[node name="LevelsButton" type="Button" parent="." unique_id=2021866468]
 offset_left = 798.0
 offset_top = 602.0
 offset_right = 1253.0
 offset_bottom = 683.0
 theme_override_fonts/font = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 71
-text = "Quit"
+text = "Choose Level"
 autowrap_trim_flags = 64
 
 [node name="Title" type="Label" parent="." unique_id=2032765788]
