@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://5dorof1xkybg"]
+
+[ext_resource type="FontFile" uid="uid://bfxdxqs5kjdej" path="res://assets/fonts/PixelGame-R9AZe.otf" id="1_3shnc"]
+[ext_resource type="PackedScene" uid="uid://drda6nt4xu0tt" path="res://scenes/level_button.tscn" id="2_p0wlc"]
+
+[node name="LevelSelect" type="Control" unique_id=120711878]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=1431549219]
+layout_mode = 0
+offset_right = 1279.0
+offset_bottom = 725.0
+color = Color(0.15746477, 0.73945576, 0.6950908, 1)
+
+[node name="LevelMenu" type="ColorRect" parent="." unique_id=1673504283]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -331.5
+offset_top = -266.0
+offset_right = 331.5
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="LevelMenu" unique_id=1439706300]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -330.75
+offset_top = -5.0
+offset_right = 330.75
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.7548252, 0.7548252, 0.7548251, 1)
+theme_override_fonts/font = ExtResource("1_3shnc")
+theme_override_font_sizes/font_size = 96
+text = "Level Select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClipControl" type="Control" parent="LevelMenu" unique_id=1316211422]
+anchors_preset = 0
+offset_left = 22.5
+offset_top = 72.0
+offset_right = 643.5
+offset_bottom = 516.0
+
+[node name="GridContainer" type="GridContainer" parent="LevelMenu/ClipControl" unique_id=965503807]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Button" parent="LevelMenu/ClipControl/GridContainer" unique_id=808874507 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button2" parent="LevelMenu/ClipControl/GridContainer" unique_id=1472641545 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button3" parent="LevelMenu/ClipControl/GridContainer" unique_id=2041535996 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button4" parent="LevelMenu/ClipControl/GridContainer" unique_id=664091935 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button5" parent="LevelMenu/ClipControl/GridContainer" unique_id=1495182652 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button6" parent="LevelMenu/ClipControl/GridContainer" unique_id=539087366 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button7" parent="LevelMenu/ClipControl/GridContainer" unique_id=1794747993 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button8" parent="LevelMenu/ClipControl/GridContainer" unique_id=1283057258 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button9" parent="LevelMenu/ClipControl/GridContainer" unique_id=331169674 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button10" parent="LevelMenu/ClipControl/GridContainer" unique_id=1138276562 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button11" parent="LevelMenu/ClipControl/GridContainer" unique_id=1640378079 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
+
+[node name="Button12" parent="LevelMenu/ClipControl/GridContainer" unique_id=447985277 instance=ExtResource("2_p0wlc")]
+layout_mode = 2
