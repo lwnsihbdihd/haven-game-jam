@@ -2,6 +2,7 @@ extends Node2D
 
 var main_menu: Node = null
 var pause_menu: Node = null
+var level_menu: Node = null
 
 var is_paused: bool = false
 
@@ -16,8 +17,11 @@ func _unhandled_input(event: InputEvent) -> void:
 func _ready() -> void:
 	main_menu = get_node("MainMenu")
 	pause_menu = get_node("PauseMenu")
+	level_menu = get_node("LevelSelect")
+
 	_setup_main_menu(main_menu)
-	_set_up_pause_menu(pause_menu)
+	_setup_pause_menu(pause_menu)
+	_setup_level_menu(level_menu)
 
 func _setup_main_menu(menu: Node) -> void:
 	var play = menu.get_node_or_null("PlayButton")
@@ -44,7 +48,7 @@ func _quit_game() -> void:
 
 	# PAUSE MENU
 
-func _set_up_pause_menu(menu: Node) -> void:
+func _setup_pause_menu(menu: Node) -> void:
 	var main_Menu = menu.get_node_or_null("PausePanel/MainMenuButton")
 	if main_Menu:
 		main_Menu.pressed.connect(_go_to_main_menu)
@@ -65,6 +69,18 @@ func _pause_game() -> void:
 			pause_menu.visible = false
 			get_tree().paused = false
 			return
+
+func _setup_level_menu(menu: Node) -> void:
+	var grid = menu.get_node("LevelMenu/ClipControl/GridContainer")
+	
+	for box in grid.get_children():
+		box.connect("level_selected", _select_level)
+
+func _select_level(level_number: int) -> void:
+	level = level_number
+	main_menu.visible = false
+	level_menu.visible = false
+	_load_level(level, true)
 
 func _load_level(level_number: int, destroy_corpses: bool) -> void:
 	
@@ -112,7 +128,6 @@ func _set_up_hud(level_root: Node) -> void:
 
 func _reset_level() -> void:
 	_load_level(level, true)
-	
 
 func _add_corpse(body) -> void:
 	if body.name == "Player":

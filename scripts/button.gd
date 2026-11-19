@@ -4,7 +4,6 @@ extends Button
 signal level_selected
 
 @export var level_num = 1
-
 @export var locked: bool = true:
 	set(value):
 		locked = value
@@ -15,11 +14,18 @@ func level_locked() -> void:
 
 func level_unlocked() -> void:
 	level_state(false)
-	$Label.text = str(level_num)
+	var level_label = get_node_or_null("LevelNum")
+	
+	if level_label:
+		$LevelNum.text = str(level_num)
+
 
 func level_state(value: bool) -> void:
 	disabled = value
-	$Label.visible = not value
+	var level_label = get_node_or_null("LevelNum")
+	
+	if level_label:
+		$LevelNum.visible = not value
 
 func _on_pressed():
 	level_selected.emit(level_num)

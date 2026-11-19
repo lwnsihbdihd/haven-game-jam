@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drda6nt4xu0tt"]
 
-[ext_resource type="Script" uid="uid://cbp8cxtctyyvb" path="res://scripts/button.gd" id="1_n4tde"]
+[ext_resource type="Script" uid="uid://cbp8cxtctyyvb" path="res://scripts/button.gd" id="1_o8246"]
 [ext_resource type="FontFile" uid="uid://bfxdxqs5kjdej" path="res://assets/fonts/PixelGame-R9AZe.otf" id="1_r04n3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byfr8"]
@@ -17,10 +17,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_byfr8")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_thw3d")
-script = ExtResource("1_n4tde")
+script = ExtResource("1_o8246")
 locked = false
 
-[node name="Label" type="Label" parent="." unique_id=704789871]
+[node name="LevelNum" type="Label" parent="." unique_id=704789871]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
