@@ -11,6 +11,5 @@ func _on_body_entered(body: Node2D) -> void:
 		body.die()
 
 func _on_area_entered(area: Area2D) -> void:
-	print(area.name)
 	if area.collision_layer == 4:
 		direction *= -1

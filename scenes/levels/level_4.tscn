@@ -254,7 +254,10 @@ sources/0 = SubResource("TileSetAtlasSource_pa8r4")
 [node name="Enemies" type="Node2D" parent="." unique_id=1530885832]
 
 [node name="Killbert" parent="Enemies" unique_id=1018806575 instance=ExtResource("1_ts8eg")]
-position = Vector2(197.99998, -151)
+position = Vector2(126, -87)
+
+[node name="Killbert2" parent="Enemies" unique_id=368451956 instance=ExtResource("1_ts8eg")]
+position = Vector2(205, -128.00002)
 
 [node name="Map" type="Node2D" parent="." unique_id=649831481]
 
@@ -287,7 +290,13 @@ position = Vector2(126, -194)
 [node name="HUD" parent="." unique_id=1109411756 instance=ExtResource("6_4wsov")]
 
 [node name="EnemyPosLimit" parent="." unique_id=1661877129 instance=ExtResource("8_um320")]
-position = Vector2(261, -153)
+position = Vector2(164, -88)
 
 [node name="EnemyPosLimit2" parent="." unique_id=1220719339 instance=ExtResource("8_um320")]
-position = Vector2(149, -152)
+position = Vector2(82, -86)
+
+[node name="EnemyPosLimit3" parent="." unique_id=1495929611 instance=ExtResource("8_um320")]
+position = Vector2(264, -133)
+
+[node name="EnemyPosLimit4" parent="." unique_id=1412759217 instance=ExtResource("8_um320")]
+position = Vector2(173, -131)
