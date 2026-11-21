@@ -3,15 +3,32 @@ extends CharacterBody2D
 
 
 const SPEED = 150.0
-const JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY = -450.0
 
 signal player_died
 
 var corpse: Node = null
 var can_move: bool = true
 var is_alive: bool = true
+var just_jumped: bool = false
+var can_jump:bool = true
+
+var frame_count: int = 0
+var start_frame_count: bool = false
+var coyote_frames: int = 3
 
 func _physics_process(delta: float) -> void:
+	if start_frame_count:
+		frame_count += 1
+	
+	if frame_count == coyote_frames:
+		start_frame_count = false
+		frame_count = 0
+		can_jump = false
+		
+	elif frame_count < coyote_frames and start_frame_count:
+		can_jump = true
+	
 	if not is_alive:
 		return
 	
@@ -21,9 +38,17 @@ func _physics_process(delta: float) -> void:
 	
 	if can_move:
 		
+		if is_on_floor():
+			can_jump = true
+			just_jumped = false
+		
 		# Handle jump.
-		if Input.is_action_just_pressed("jump") and is_on_floor():
+		if Input.is_action_just_pressed("jump") and can_jump and not just_jumped:
+			just_jumped = true
 			velocity.y = JUMP_VELOCITY
+		elif not is_on_floor() and not just_jumped:
+			start_frame_count = true
+			can_jump = true
 
 		var direction := Input.get_axis("left", "right")
 		if direction:
