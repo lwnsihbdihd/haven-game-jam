@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://chk02s5od5mnt"]
 
 [ext_resource type="Script" uid="uid://du1yipoebnrgi" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="AudioStream" uid="uid://i41qp4d2r6np" path="res://assets/sound/Jungle.mp3" id="2_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://c64yfexktv616" path="res://scenes/main_menu.tscn" id="3_jyhfs"]
-[ext_resource type="AudioStream" uid="uid://by73mtvoqefox" path="res://assets/sound/better game.wav" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://y1oump0lcop3" path="res://scenes/pause_menu.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://5dorof1xkybg" path="res://scenes/level_select.tscn" id="5_tbgi4"]
 
@@ -11,7 +11,7 @@ script = ExtResource("1_sugp2")
 
 [node name="bgMusic" type="AudioStreamPlayer2D" parent="." unique_id=851614255]
 process_mode = 3
-stream = ExtResource("3_sugp2")
+stream = ExtResource("2_tbgi4")
 autoplay = true
 
 [node name="Corpses" type="Node2D" parent="." unique_id=608289455]
