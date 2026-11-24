@@ -249,22 +249,13 @@ position = Vector2(64, -8)
 [node name="Hazards" type="Node2D" parent="." unique_id=463982649]
 
 [node name="Hazard" parent="Hazards" unique_id=69432172 instance=ExtResource("4_fkk1g")]
-position = Vector2(184, 9)
-
-[node name="Hazard2" parent="Hazards" unique_id=1156537313 instance=ExtResource("4_fkk1g")]
-position = Vector2(200, 9)
+position = Vector2(191, 9)
 
 [node name="Hazard3" parent="Hazards" unique_id=690807019 instance=ExtResource("4_fkk1g")]
-position = Vector2(296, 9)
-
-[node name="Hazard4" parent="Hazards" unique_id=997374777 instance=ExtResource("4_fkk1g")]
-position = Vector2(312, 9)
+position = Vector2(307, 9)
 
 [node name="Hazard5" parent="Hazards" unique_id=1786121030 instance=ExtResource("4_fkk1g")]
-position = Vector2(328, 9)
-
-[node name="Hazard6" parent="Hazards" unique_id=82385775 instance=ExtResource("4_fkk1g")]
-position = Vector2(344, 9)
+position = Vector2(336, 9)
 
 [node name="Exit" parent="." unique_id=46624582 instance=ExtResource("5_ftfob")]
 position = Vector2(482, -60)

@@ -140,8 +140,6 @@ func _add_corpse(body) -> void:
 		corpse.position = body.position
 		_tp_player(52, -8, body)
 		body.revive.call_deferred()
-		#body.die()
-		#call_deferred("_load_level", 1)
 
 func _next_level(body) -> void:
 	if body.name == "Player":
