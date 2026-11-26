@@ -138,8 +138,7 @@ func _add_corpse(body) -> void:
 		var corpse = Corpse.instantiate()
 		$Corpses.call_deferred("add_child", corpse)
 		corpse.position = body.position
-		_tp_player(52, -8, body)
-		body.revive.call_deferred()
+		call_deferred("_load_level", level, false)
 		#body.die()
 		#call_deferred("_load_level", 1)
 
@@ -158,8 +157,3 @@ func _destroy_corpses() -> void:
 			corpse.queue_free()
 	else:
 		return
-
-
-func _tp_player(x: float, y: float, player: Node) -> void:
-	player.position = Vector2(x, y)
-	player.velocity = Vector2(0, 0)
