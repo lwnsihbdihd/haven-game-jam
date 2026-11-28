@@ -112,7 +112,7 @@ func _load_level(level_number: int, destroy_corpses: bool) -> void:
 	elif level_number == 3:
 		camera.limit_right = 560
 	elif level_number == 4:
-		camera.limit_right = 400
+		camera.limit_right = 496
 
 func _set_up_level(level_root: Node) -> void:
 	var exit = level_root.get_node_or_null("Exit")
@@ -138,10 +138,8 @@ func _add_corpse(body) -> void:
 		var corpse = Corpse.instantiate()
 		$Corpses.call_deferred("add_child", corpse)
 		corpse.position = body.position
-		_tp_player(52, -8, body)
-		body.revive.call_deferred()
-		#body.die()
-		#call_deferred("_load_level", 1)
+		body.die()
+		call_deferred("_load_level", level, false)
 
 func _next_level(body) -> void:
 	if body.name == "Player":
@@ -152,14 +150,7 @@ func _next_level(body) -> void:
 func _destroy_corpses() -> void:
 	var corpses = get_node("Corpses")
 	if corpses:
-		print("corpses node found")
 		for corpse in corpses.get_children():
-			print("corpse found")
 			corpse.queue_free()
 	else:
 		return
-
-
-func _tp_player(x: float, y: float, player: Node) -> void:
-	player.position = Vector2(x, y)
-	player.velocity = Vector2(0, 0)

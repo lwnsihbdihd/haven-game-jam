@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://braitx4hcgy5b"]
+
+[ext_resource type="Script" uid="uid://crmcak3dhg4vf" path="res://scripts/digbert.gd" id="1_h88a2"]
+[ext_resource type="Texture2D" uid="uid://m6npvq2mn5yi" path="res://assets/images/lamp pole.png" id="1_iyx75"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujbg4"]
+size = Vector2(36, 96)
+
+[node name="Digbert" type="Area2D" unique_id=1933923245]
+scale = Vector2(0.25, 0.25)
+collision_layer = 2
+collision_mask = 12
+script = ExtResource("1_h88a2")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1104358195]
+texture = ExtResource("1_iyx75")
+
+[node name="Collisionbox" type="CollisionShape2D" parent="." unique_id=722011629]
+shape = SubResource("RectangleShape2D_ujbg4")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
